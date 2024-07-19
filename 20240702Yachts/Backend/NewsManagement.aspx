@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Backend/SiteBackend.Master" AutoEventWireup="true" CodeBehind="NewsManagement.aspx.cs" Inherits="_20240702Yachts.Backend.NewsManagement" %>
 
+<%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -74,26 +76,26 @@
 
                 <%-- Cover Content start --%>
                 <asp:Panel ID="PanelCoverContent" runat="server" CssClass="col-sm-4" Visible="false">
-                    <div class="card"  style="height:calc(100% - 24px);">
+                    <div class="card" style="height: calc(100% - 24px);">
                         <div class="card-header">
                             <h5>Cover Content</h5>
                         </div>
 
                         <div class="card-body">
                             <h6>Thumbnail: </h6>
-                            <asp:Image ID="ImageThumbnail" runat="server" CssClass="form-control mb-3" style="height:100px;width:auto;"/>
+                            <asp:Image ID="ImageThumbnail" runat="server" CssClass="form-control mb-3" Style="height: 100px; width: auto;" />
 
                             <div class="row">
-                                <asp:FileUpload ID="FileUploadThumbnail" runat="server"  CssClass="form-control mb-3" style="width:70%" />
+                                <asp:FileUpload ID="FileUploadThumbnail" runat="server" CssClass="form-control mb-3" Style="width: 70%" />
                                 <asp:Button ID="ButtonThumbnail" runat="server" Text="Upload" class="btn btn-primary mb-3 col-3 " OnClick="ButtonThumbnail_Click" />
                             </div>
 
                             <hr />
-                            
+
                             <h6>Summary: </h6>
                             <asp:TextBox ID="summaryTbox" runat="server" type="text" placeholder="Enter summary text" CssClass="form-control mb-4" TextMode="MultiLine" Height="200px"></asp:TextBox>
                             <asp:Label ID="LabUploadSummary" runat="server" Text="*Upload Success!" ForeColor="green" CssClass="d-flex justify-content-center" Visible="False"></asp:Label>
-                            <asp:Button ID="ButtonSummary" runat="server" Text="Upload Summary"  CssClass="btn btn-outline-primary btn-block mt-3"/>
+                            <asp:Button ID="ButtonSummary" runat="server" Text="Upload Summary" CssClass="btn btn-outline-primary btn-block mt-3" OnClick="ButtonSummary_Click" />
 
                         </div>
 
@@ -117,6 +119,22 @@
                         </div>
 
                         <div class="card-body">
+
+                            <!-- [ Main Content ] start -->
+
+                            <%--  ckeditor --%>
+                            <CKEditor:CKEditorControl ID="CKEditorControl1" runat="server" BasePath="/Scripts/ckeditor/" Toolbar="Bold|Italic|Underline|Strike|Subscript|Superscript|-|RemoveFormat
+                            NumberedList|BulletedList|-|Outdent|Indent|-|JustifyLeft|JustifyCenter|JustifyRight|JustifyBlock|-|BidiLtr|BidiRtl
+                            /
+                            Styles|Format|Font|FontSize
+                            TextColor|BGColor
+                            Link|Image"
+                                Height="400px">
+                            </CKEditor:CKEditorControl>
+
+                            <asp:Label ID="UploadMainContentLab" runat="server" Text="Label" Visible="False" ForeColor="#009933" class="d-flex justify-content-center"></asp:Label>
+                            <asp:Button ID="UploadMainContentBtn" runat="server" Text="Upload Main Content" class="btn btn-outline-primary btn-block mt-3" OnClick="UploadMainContentBtn_Click" />
+
                         </div>
 
                     </div>
@@ -133,6 +151,19 @@
                         </div>
 
                         <div class="card-body">
+
+
+                            <%-- 證書上傳圖片，使用相簿的方式，橫式 --%>
+                            <h6 style="margin-top: 25px;">Upload Group Image :</h6>
+                            <div class="input-group my-3">
+                                <asp:FileUpload ID="imageUpload" runat="server" class="btn btn-outline-primary btn-block" AllowMultiple="True" />
+                                <asp:Button ID="UploadBtn" runat="server" Text="Upload" class="btn btn-primary" OnClick="UploadBtn_Click" />
+                            </div>
+                            <h6>Image List :</h6>
+                            <asp:RadioButtonList ID="RadioButtonListU" runat="server" class="my-3 mx-auto" AutoPostBack="True" CellPadding="10" RepeatColumns="2" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonListU_SelectedIndexChanged"></asp:RadioButtonList>
+                            <asp:Button ID="DelImageBtn" runat="server" Text="Delete Image" type="button" class="btn btn-danger btn-sm" OnClientClick="return confirm('Are you sure you want to delete？')" Visible="False" OnClick="DelImageBtn_Click" />
+
+
                         </div>
 
                     </div>
