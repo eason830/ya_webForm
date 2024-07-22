@@ -1692,6 +1692,8 @@
     <Content Include="Frontend\html\yachts03.htm" />
     <Content Include="Frontend\html\yachts03_test.htm" />
     <Content Include="Frontend\LoginFront.aspx" />
+    <Content Include="Frontend\NewFront2.aspx" />
+    <Content Include="Frontend\NewsFront.aspx" />
     <Content Include="Frontend\RegisterFront.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Pagination.ascx" />
@@ -2246,6 +2248,20 @@
     </Compile>
     <Compile Include="Frontend\LoginFront.aspx.designer.cs">
       <DependentUpon>LoginFront.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\NewFront2.aspx.cs">
+      <DependentUpon>NewFront2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\NewFront2.aspx.designer.cs">
+      <DependentUpon>NewFront2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\NewsFront.aspx.cs">
+      <DependentUpon>NewsFront.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\NewsFront.aspx.designer.cs">
+      <DependentUpon>NewsFront.aspx</DependentUpon>
     </Compile>
     <Compile Include="Frontend\RegisterFront.aspx.cs">
       <DependentUpon>RegisterFront.aspx</DependentUpon>
