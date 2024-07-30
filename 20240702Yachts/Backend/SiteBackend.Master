@@ -118,6 +118,25 @@
                             </li>
 
                             <li class="pc-item">
+                                <a href="../Frontend/IndexFront.aspx" class="pc-link">
+                                    <span class="pc-micon">
+                                        <i data-feather="user"></i>
+                                    </span>
+                                    <span class="pc-mtext">Index</span>
+                                </a>
+                            </li>
+
+
+                            <li class="pc-item">
+                                <a href="../Frontend/YachtsOverviewFront.aspx" class="pc-link">
+                                    <span class="pc-micon">
+                                        <i data-feather="user"></i>
+                                    </span>
+                                    <span class="pc-mtext">Yachts</span>
+                                </a>
+                            </li>
+
+                            <li class="pc-item">
                                 <a href="../Frontend/NewsFront.aspx" class="pc-link">
                                     <span class="pc-micon">
                                         <i data-feather="user"></i>
@@ -173,12 +192,12 @@
                             </li>
 
                             <li class="pc-item">
-                                <a href="./SpecificationManagement.aspx" class="pc-link">
+                                <a href="./YachtManagement.aspx" class="pc-link">
                                     <span class="pc-micon"><i data-feather="user"></i></span>
-                                    <span class="pc-mtext">Specificatio Management</span>
+                                    <span class="pc-mtext">Yacht Management</span>
                                 </a>
                             </li>
-                            
+
                             <li class="pc-item">
                                 <a href="./OverviewManagement.aspx" class="pc-link">
                                     <span class="pc-micon"><i data-feather="user"></i></span>
@@ -186,10 +205,13 @@
                                 </a>
                             </li>
 
+
+
+
                             <li class="pc-item">
-                                <a href="./YachtManagement.aspx" class="pc-link">
+                                <a href="./SpecificationManagement.aspx" class="pc-link">
                                     <span class="pc-micon"><i data-feather="user"></i></span>
-                                    <span class="pc-mtext">Yacht Management</span>
+                                    <span class="pc-mtext">Specification Management</span>
                                 </a>
                             </li>
 
@@ -200,12 +222,7 @@
                                 </a>
                             </li>
 
-                            <li class="pc-item">
-                                <a href="./UserManagement.aspx" class="pc-link">
-                                    <span class="pc-micon"><i data-feather="user"></i></span>
-                                    <span class="pc-mtext">User Management</span>
-                                </a>
-                            </li>
+
 
                             <li class="pc-item">
                                 <a href="./DealersManagement.aspx" class="pc-link">
@@ -213,11 +230,18 @@
                                     <span class="pc-mtext">Dealers Management</span>
                                 </a>
                             </li>
-                            
+
                             <li class="pc-item">
                                 <a href="./CompanyManagement.aspx" class="pc-link">
                                     <span class="pc-micon"><i data-feather="users"></i></span>
                                     <span class="pc-mtext">Company Management</span>
+                                </a>
+                            </li>
+
+                            <li class="pc-item">
+                                <a href="./UserManagement.aspx" class="pc-link">
+                                    <span class="pc-micon"><i data-feather="user"></i></span>
+                                    <span class="pc-mtext">User Management</span>
                                 </a>
                             </li>
 

@@ -223,7 +223,7 @@ namespace _20240702Yachts.Frontend
                 // 加入渲染型號內容上方分類連結列表 Video 分頁標籤，有存影片連結網址才渲染
                 saveRowList=JsonConvert.DeserializeObject<List<RowData>>(loadJson);
 
-                if (!String.IsNullOrEmpty(saveRowList[0].SaveValue))
+                if (!String.IsNullOrEmpty(saveRowList[0]?.SaveValue))
                 {
                     topMenuHtmlStr.Append($"<li><a class='menu_yli04' href='YachtsVideoFront.aspx?id={guidStr}'>Video</a></li>");
                 }

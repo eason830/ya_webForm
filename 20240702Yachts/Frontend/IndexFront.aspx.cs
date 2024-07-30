@@ -46,19 +46,25 @@ namespace _20240702Yachts.Frontend
             // html builder 
             StringBuilder bannerHtml = new StringBuilder();
 
+
+            // 第幾張 Bannder
+            int BannerIndex = 1;
+
             // 將所有內容放入
-            while (rd.Read()) {
+            while (rd.Read())
+            {
 
                 string loadJson = rd["bannerImgPathJSON"].ToString();
 
                 // 反序列化
-                savePathList= JsonConvert.DeserializeObject<List<ImagePath>>(loadJson);
+                savePathList = JsonConvert.DeserializeObject<List<ImagePath>>(loadJson);
 
 
                 //每個型號只取出第一張圖
                 string imgNameStr = "";
 
-                if (savePathList?.Count > 0) {
+                if (savePathList?.Count > 0)
+                {
                     // 指定選取 List<T> 的第一筆資料
                     imgNameStr = savePathList[0].SavePath;
                 }
@@ -77,29 +83,53 @@ namespace _20240702Yachts.Frontend
                 string displayNewStr = "0";
 
 
+                // 判斷要不要顯示 New Design 、 New Building
+                bool showNewImg = false;
+
                 //判斷是否顯示對應標籤
                 if (isNewDesignStr.Equals("True"))
                 {
                     displayNewStr = "1";
                     newTagStr = "./html/images/new02.png";
+                    showNewImg = true;
                 }
                 else if (isNewBuildingStr.Equals("True"))
                 {
                     displayNewStr = "1";
                     newTagStr = "./html/images/new01.png";
+                    showNewImg = true;
+                }
+
+
+                if (BannerIndex == 1)
+                {
+                    //加入遊艇型號輪播圖 HTML
+                    bannerHtml.Append($"<li class='info on' style='border-radius: 5px;height: 424px;width: 978px;'>" +
+                                        $"<a href='' target='_blank'><img src='/Image/imageYachts/{imgNameStr}' style='width: 978px;height: 424px;border-radius: 5px;'/></a>" +
+                                        $"<div class='wordtitle'>{modelArr[0]} <span>{modelArr[1]}</span><br /><p>SPECIFICATION SHEET</p></div>"
+                                        );
+                }
+                else
+                {
+                    //加入遊艇型號輪播圖 HTML
+                    bannerHtml.Append($"<li class='info' style='border-radius: 5px;height: 424px;width: 978px;'>" +
+                                        $"<a href='' target='_blank'><img src='/Image/imageYachts/{imgNameStr}' style='width: 978px;height: 424px;border-radius: 5px;'/></a>" +
+                                        $"<div class='wordtitle'>{modelArr[0]} <span>{modelArr[1]}</span><br /><p>SPECIFICATION SHEET</p></div>"
+                                        );
                 }
 
 
                 //加入遊艇型號輪播圖 HTML
-                //加入遊艇型號輪播圖 HTML
-                bannerHtml.Append($"<li class='info' style='border-radius: 5px;height: 424px;width: 978px;'>" +
-                                    $"<a href='' target='_blank'><img src='/Image/imageYachts/{imgNameStr}' style='width: 978px;height: 424px;border-radius: 5px;'/></a>" +
-                                    $"<div class='wordtitle'>{modelArr[0]} <span>{modelArr[1]}</span><br /><p>SPECIFICATION SHEET</p></div>" +
-                                    $"<div class='new' style='display: none;overflow: hidden;border-radius:10px;'><img src='{newTagStr}' alt='new' /></div>" +
-                                    $"<input type='hidden' value='{displayNewStr}' /></li>");
+
+                if (showNewImg)
+                {
+                    bannerHtml.Append($"<div class='new' style='overflow: hidden;border-radius:10px;'><img src='{newTagStr}' alt='new' /></div>");
+                }
+
+                bannerHtml.Append($"<input type='hidden' value='{displayNewStr}' /></li>");
 
 
-
+                BannerIndex++;
             }
 
 
@@ -127,7 +157,7 @@ namespace _20240702Yachts.Frontend
             DBHelper db = new DBHelper();
 
             string sqlCommand = $"SELECT COUNT(id) FROM [News] WHERE dateTitle >= @limitDate AND dateTitle <= @nowDate";
-            Dictionary<string,object> parameters = new Dictionary<string,object>();
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
 
             parameters["@limitDate"] = limitDate;
             parameters["@nowDate"] = nowDate;
@@ -160,7 +190,7 @@ namespace _20240702Yachts.Frontend
             parameters2["@limitDate"] = limitDate;
             parameters2["@nowDate"] = nowDate;
 
-            SqlDataReader rd2 = db2.SearchDB(sqlCommand2 , parameters2);
+            SqlDataReader rd2 = db2.SearchDB(sqlCommand2, parameters2);
 
             int count = 1; // 第幾筆新聞
 
@@ -172,7 +202,7 @@ namespace _20240702Yachts.Frontend
                 {
                     //渲染第1筆新聞圖卡
                     string newsImg = rd2["thumbnailPath"].ToString();
-                    LiteralNewImg1.Text = $"<img id='thumbnail_Image1' src='{newsImg}' style='border-width: 0px;' />";
+                    LiteralNewImg1.Text = $"<img id='thumbnail_Image1' src='{newsImg}' style='border-width: 0px;height:100%;' />";
                     DateTime dateTimeTitle = DateTime.Parse(rd2["dateTitle"].ToString());
                     LabNewsDate1.Text = dateTimeTitle.ToString("yyyy/M/d");
                     HLinkNews1.Text = rd2["headline"].ToString();

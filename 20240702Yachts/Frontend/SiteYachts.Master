@@ -19,6 +19,9 @@
         $('.slideshow').cycle({
             fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
         });
+
+      
+
     });
 </script>
 <!--[if lt IE 7]>
@@ -39,6 +42,13 @@
         galleries[0].settings.effect = 'slide-hori';
 
 
+        $('.ad-forward').click(function () {
+            galleries[0].nextImage(); // 觸發下一張圖片
+        });
+
+        $('.ad-back').click(function () {
+            galleries[0].prevImage(); // 觸發上一張圖片
+        });
 
     });
 </script>
@@ -56,7 +66,7 @@
             <!--------------------------------選單開始---------------------------------------------------->
             <div class="menu">
                 <ul>
-                    <li class="menuli01"><a href="./YachtsFront.aspx">Yachts</a></li>
+                    <li class="menuli01"><a href="./YachtsOverviewFront.aspx">Yachts</a></li>
                     <li class="menuli02"><a href="./NewsFront.aspx">NEWS</a></li>
                     <li class="menuli03"><a href="./CompanyFront1.aspx">COMPANY</a></li>
                     <li class="menuli04"><a href="./DealersFront.aspx">DEALERS</a></li>
@@ -77,7 +87,7 @@
                 <div id="gallery" class="ad-gallery">
                     <div class="ad-image-wrapper">
                     </div>
-                    <div class="ad-controls" style="display: none">
+                    <div class="ad-controls" style="">
                     </div>
                     <div class="ad-nav">
                         <div class="ad-thumbs">

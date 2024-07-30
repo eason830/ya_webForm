@@ -108,7 +108,7 @@ namespace _20240702Yachts.Frontend
                     displayStr = "inline-block";
                 }
                 newListHtml.Append($"<li><div class='list01'><ul><li><div class='news01'>" +
-                    $"<img src='Frontend/html/images/new_top01.png' alt='&quot;&quot;' style='display: {displayStr};position: absolute;z-index: 5;'/>" +
+                    $"<img src='/Frontend/html/images/new_top01.png' alt='&quot;&quot;' style='display: {displayStr};position: absolute;z-index: 5;'/>" +
                     $"<div class='news02p1' style='margin: 0px;border-width: 0px;padding: 0px;' ><p>" +
                     $"<img id='thumbnail_Image{idStr}' src='{thumbnailPathStr}' style='border-width: 0px;position: absolute;z-index: 1;' width='161px' height='121px' />" +
                     $"</p></div></li><li><span>{dateTitleStr}</span><br />" +

@@ -13,7 +13,12 @@
 
             // 先取得 #abgne-block-20110111 , 必要參數及輪播間隔
             var $block = $('#abgne-block-20110111'),
-                timrt, speed = 4000;
+                timrt, speed = 2000;
+
+            // 換下一張
+            
+        
+
 
 
             // 幫 #abgne-block-20110111 .title ul li 加上 hover() 事件
@@ -51,6 +56,10 @@
 
             // 啟動計時器
             timer = setTimeout(move, speed);
+
+
+
+  
 
         });
 

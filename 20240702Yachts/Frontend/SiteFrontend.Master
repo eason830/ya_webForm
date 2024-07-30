@@ -117,7 +117,7 @@
             <!--------------------------------選單開始---------------------------------------------------->
             <div class="menu">
                 <ul>
-                    <li class="menuli01"><a href="./YachtsFront.aspx">Yachts</a></li>
+                    <li class="menuli01"><a href="./YachtsOverviewFront.aspx">Yachts</a></li>
                     <li class="menuli02"><a href="./NewsFront.aspx">NEWS</a></li>
                     <li class="menuli03"><a href="./CompanyFront1.aspx">COMPANY</a></li>
                     <li class="menuli04"><a href="./DealersFront.aspx">DEALERS</a></li>
@@ -179,14 +179,12 @@
 
 
 
-            <div class="conbg">
 
                 <%-- 頁面內容 --%>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
 
 
-            </div>
 
 
             <!--------------------------------落款開始---------------------------------------------------->

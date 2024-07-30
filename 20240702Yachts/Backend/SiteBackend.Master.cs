@@ -14,9 +14,9 @@ namespace _20240702Yachts.Backend
         protected void Page_Init(object sender, EventArgs e)
         {
             //清除Cache，避免登出後按上一頁還會顯示Cache頁面
-            //Response.Cache.SetExpires(DateTime.UtcNow.AddMinutes(-1));
-            //Response.Cache.SetCacheability(HttpCacheability.NoCache);
-            //Response.Cache.SetNoStore();
+            Response.Cache.SetExpires(DateTime.UtcNow.AddMinutes(-1));
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetNoStore();
         }
 
 
@@ -27,7 +27,7 @@ namespace _20240702Yachts.Backend
             //權限關門判斷 (Cookie)
             if (!HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                //Response.Redirect("../Frontend/LoginFront.aspx"); // 導回登入頁面
+                Response.Redirect("../Frontend/LoginFront.aspx"); // 導回登入頁面
             }
             else
             {
