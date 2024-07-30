@@ -5,6 +5,20 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
+    <!--遮罩-->
+    <div class="bannermasks">
+        <img src="./html/images/DEALERS.jpg" alt="&quot;&quot;" width="967" height="371" />
+    </div>
+    <!--遮罩結束-->
+
+    <div class="banner">
+        <ul>
+            <li>
+                <img src="./html/images/newbanner.jpg" alt="Tayana Yachts" /></li>
+        </ul>
+
+    </div>
+
     <!--------------------------------左邊選單開始---------------------------------------------------->
     <div class="left">
 
@@ -50,7 +64,7 @@
 
                     <asp:Literal ID="LiteralDealerList" runat="server"></asp:Literal>
 
-<%--                    <li>
+                    <%--                    <li>
                         <div class="list02">
                             <ul>
                                 <li class="list02li">
@@ -146,8 +160,6 @@
                             </ul>
                         </div>
                     </li>--%>
-
-
                 </ul>
 
                 <div class="pagenumber">| <span>1</span> | <a href="#">2</a> | <a href="#">3</a> | <a href="#">4</a> | <a href="#">5</a> |  <a href="#">Next</a>  <a href="#">LastPage</a></div>

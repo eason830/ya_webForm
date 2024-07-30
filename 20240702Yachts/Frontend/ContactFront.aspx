@@ -7,7 +7,19 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <!--遮罩-->
+    <div class="bannermasks">
+        <img src="./html/images/contact.jpg" alt="&quot;&quot;" width="967" height="371" />
+    </div>
+    <!--遮罩結束-->
 
+    <div class="banner">
+        <ul>
+            <li>
+                <img src="./html/images/newbanner.jpg" alt="Tayana Yachts" /></li>
+        </ul>
+
+    </div>
 
     <!--------------------------------左邊選單開始---------------------------------------------------->
     <div class="left">

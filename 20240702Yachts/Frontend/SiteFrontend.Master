@@ -9,8 +9,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
-            <style>
-
+    <style>
         div#pagination {
             height: 50px;
             margin-top: 3px;
@@ -112,7 +111,7 @@
 
         <div class="contain">
             <div class="sub">
-                <p><a href="#">Home</a></p>
+                <p><a href="./IndexFront.aspx">Home</a></p>
             </div>
 
             <!--------------------------------選單開始---------------------------------------------------->
@@ -128,9 +127,9 @@
             <!--------------------------------選單開始結束---------------------------------------------------->
 
             <!--遮罩-->
-            <div class="bannermasks">
+<%--            <div class="bannermasks">
                 <img src="./html/images/contact.jpg" alt="&quot;&quot;" width="967" height="371" />
-            </div>
+            </div>--%>
             <!--遮罩結束-->
 
             <!--<div id="buttom01"><a href="#"><img src="images/buttom01.gif" alt="next" /></a></div>-->
@@ -168,13 +167,13 @@
 
             <!--------------------------------換圖開始---------------------------------------------------->
 
-            <div class="banner">
+<%--            <div class="banner">
                 <ul>
                     <li>
                         <img src="./html/images/newbanner.jpg" alt="Tayana Yachts" /></li>
                 </ul>
 
-            </div>
+            </div>--%>
             <!--------------------------------換圖結束---------------------------------------------------->
 
 
@@ -182,8 +181,8 @@
 
             <div class="conbg">
 
-               <%-- 頁面內容 --%>
-               <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <%-- 頁面內容 --%>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
 
 

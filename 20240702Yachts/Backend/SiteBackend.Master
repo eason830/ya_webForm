@@ -173,6 +173,27 @@
                             </li>
 
                             <li class="pc-item">
+                                <a href="./SpecificationManagement.aspx" class="pc-link">
+                                    <span class="pc-micon"><i data-feather="user"></i></span>
+                                    <span class="pc-mtext">Specificatio Management</span>
+                                </a>
+                            </li>
+                            
+                            <li class="pc-item">
+                                <a href="./OverviewManagement.aspx" class="pc-link">
+                                    <span class="pc-micon"><i data-feather="user"></i></span>
+                                    <span class="pc-mtext">Overview Management</span>
+                                </a>
+                            </li>
+
+                            <li class="pc-item">
+                                <a href="./YachtManagement.aspx" class="pc-link">
+                                    <span class="pc-micon"><i data-feather="user"></i></span>
+                                    <span class="pc-mtext">Yacht Management</span>
+                                </a>
+                            </li>
+
+                            <li class="pc-item">
                                 <a href="./NewsManagement.aspx" class="pc-link">
                                     <span class="pc-micon"><i data-feather="user"></i></span>
                                     <span class="pc-mtext">News Management</span>

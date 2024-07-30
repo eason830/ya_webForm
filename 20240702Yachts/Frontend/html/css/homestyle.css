@@ -546,11 +546,19 @@ body {
 }
 .menu_yli03 {
 	background-image: url(../images/menu_y1_06.jpg);
-	width: 123px;
+	width: 113px;
 }
 .menu_yli03:hover {
 	background-image: url(../images/menu_y2_06.jpg);
-	width: 123px;
+	width: 113px;
+}
+.menu_yli04 {
+	background-image: url(../images/menu_y1_07.jpg);
+	width: 100px;
+}
+.menu_yli04:hover {
+	background-image: url(../images/menu_y2_07.jpg);
+	width: 100px;
 }
 .menu_y00 {
 	background-image: url(../images/menu_y1_03.jpg);

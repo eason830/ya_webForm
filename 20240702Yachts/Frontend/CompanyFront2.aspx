@@ -4,6 +4,19 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <!--遮罩-->
+    <div class="bannermasks">
+        <img src="./html/images/company.jpg" alt="&quot;&quot;" width="967" height="371" />
+    </div>
+    <!--遮罩結束-->
+
+    <div class="banner">
+        <ul>
+            <li>
+                <img src="./html/images/newbanner.jpg" alt="Tayana Yachts" /></li>
+        </ul>
+
+    </div>
 
 
     <div class="conbg">
@@ -43,7 +56,7 @@
 
                 <!--------------------------------內容開始---------------------------------------------------->
                 <div class="box3">
-                   <%-- <h4>The Luxury Tayana 48 Pilothouse Lavish Woodwork Is Among</h4>
+                    <%-- <h4>The Luxury Tayana 48 Pilothouse Lavish Woodwork Is Among</h4>
                     <p>
                         <img src="images/pit010.jpg" alt="&quot;&quot;" width="274" height="192" />
                     </p>

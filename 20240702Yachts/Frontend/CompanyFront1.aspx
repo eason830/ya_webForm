@@ -4,6 +4,18 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <!--遮罩-->
+    <div class="bannermasks">
+        <img src="./html/images/company.jpg" alt="&quot;&quot;" width="967" height="371" /></div>
+    <!--遮罩結束-->
+
+    <div class="banner">
+        <ul>
+            <li>
+                <img src="./html/images/newbanner.jpg" alt="Tayana Yachts" /></li>
+        </ul>
+
+    </div>
 
     <div class="conbg">
         <!--------------------------------左邊選單開始---------------------------------------------------->
@@ -42,7 +54,7 @@
 
                 <!--------------------------------內容開始---------------------------------------------------->
                 <div class="box3">
-                   <%-- <h4>The Luxury Tayana 48 Pilothouse Lavish Woodwork Is Among</h4>
+                    <%-- <h4>The Luxury Tayana 48 Pilothouse Lavish Woodwork Is Among</h4>
                     <p>
                         <img src="images/pit010.jpg" alt="&quot;&quot;" width="274" height="192" /></p>
                     Founded in 1973, Ta Yang Building Co., Ltd. Has built over 1400 blue water cruising yachts to date. This world renowned custom yacht builder offers a large compliment of sailboats ranging from 37’ to 72’, many offer aft or center cockpit design, deck saloon or pilothouse options.<br />
@@ -54,9 +66,9 @@
                     <br />
                     <br />
                     Peter Chen was recently appointed the General Manager of Tayana. Peter has a wide-ranging knowledge of the yacht building industry; as part of the TAYANA team, Peter’s vision is genuinely rooted in honesty and integrity. “Our aim is to create outstanding styling, live aboard comfort, and safety at sea for every proud Tayana owner.”<br />--%>
-                
+
                     <asp:Literal ID="Literal1" runat="server"></asp:Literal>
-                
+
                 </div>
 
 

@@ -881,7 +881,10 @@
     <Content Include="Backend\dist\pages\login-v1.html" />
     <Content Include="Backend\dist\pages\register-v1.html" />
     <Content Include="Backend\NewsManagement.aspx" />
+    <Content Include="Backend\OverviewManagement.aspx" />
+    <Content Include="Backend\SpecificationManagement.aspx" />
     <Content Include="Backend\UserManagement.aspx" />
+    <Content Include="Backend\YachtManagement.aspx" />
     <Content Include="ckfinder\bin\Debug\CKFinder.dll" />
     <Content Include="ckfinder\bin\Debug\CKFinder.pdb" />
     <Content Include="ckfinder\bin\Debug\CKFinder_FileEditor.dll" />
@@ -1691,10 +1694,16 @@
     <Content Include="Frontend\html\yachts02.htm" />
     <Content Include="Frontend\html\yachts03.htm" />
     <Content Include="Frontend\html\yachts03_test.htm" />
+    <Content Include="Frontend\IndexFront.aspx" />
     <Content Include="Frontend\LoginFront.aspx" />
     <Content Include="Frontend\NewFront2.aspx" />
     <Content Include="Frontend\NewsFront.aspx" />
     <Content Include="Frontend\RegisterFront.aspx" />
+    <Content Include="Frontend\YachtsFront.aspx" />
+    <Content Include="Frontend\YachtsLayoutFront.aspx" />
+    <Content Include="Frontend\YachtsOverviewFront.aspx" />
+    <Content Include="Frontend\YachtsSpecificationFront.aspx" />
+    <Content Include="Frontend\YachtsVideoFront.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Pagination.ascx" />
     <Content Include="RecaptchaNet.Readme.txt" />
@@ -1780,6 +1789,7 @@
     <Content Include="ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="ckfinder\userfiles\.htaccess" />
+    <Content Include="Frontend\SiteYachts.Master" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\ckeditor\ckeditor_source.js" />
     <Content Include="Scripts\ckeditor\config.js" />
@@ -2183,6 +2193,13 @@
     <Compile Include="Backend\NewsManagement.aspx.designer.cs">
       <DependentUpon>NewsManagement.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Backend\OverviewManagement.aspx.cs">
+      <DependentUpon>OverviewManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\OverviewManagement.aspx.designer.cs">
+      <DependentUpon>OverviewManagement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Backend\SiteBackend.Master.cs">
       <DependentUpon>SiteBackend.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2190,12 +2207,26 @@
     <Compile Include="Backend\SiteBackend.Master.designer.cs">
       <DependentUpon>SiteBackend.Master</DependentUpon>
     </Compile>
+    <Compile Include="Backend\SpecificationManagement.aspx.cs">
+      <DependentUpon>SpecificationManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\SpecificationManagement.aspx.designer.cs">
+      <DependentUpon>SpecificationManagement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Backend\UserManagement.aspx.cs">
       <DependentUpon>UserManagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Backend\UserManagement.aspx.designer.cs">
       <DependentUpon>UserManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\YachtManagement.aspx.cs">
+      <DependentUpon>YachtManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\YachtManagement.aspx.designer.cs">
+      <DependentUpon>YachtManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -2242,6 +2273,13 @@
     <Compile Include="Frontend\DealersFront.aspx.designer.cs">
       <DependentUpon>DealersFront.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Frontend\IndexFront.aspx.cs">
+      <DependentUpon>IndexFront.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\IndexFront.aspx.designer.cs">
+      <DependentUpon>IndexFront.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Frontend\LoginFront.aspx.cs">
       <DependentUpon>LoginFront.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2286,6 +2324,48 @@
     </Compile>
     <Compile Include="Frontend\SiteIndex.Master.designer.cs">
       <DependentUpon>SiteIndex.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\SiteYachts.Master.cs">
+      <DependentUpon>SiteYachts.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\SiteYachts.Master.designer.cs">
+      <DependentUpon>SiteYachts.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\YachtsFront.aspx.cs">
+      <DependentUpon>YachtsFront.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\YachtsFront.aspx.designer.cs">
+      <DependentUpon>YachtsFront.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\YachtsLayoutFront.aspx.cs">
+      <DependentUpon>YachtsLayoutFront.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\YachtsLayoutFront.aspx.designer.cs">
+      <DependentUpon>YachtsLayoutFront.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\YachtsOverviewFront.aspx.cs">
+      <DependentUpon>YachtsOverviewFront.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\YachtsOverviewFront.aspx.designer.cs">
+      <DependentUpon>YachtsOverviewFront.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\YachtsSpecificationFront.aspx.cs">
+      <DependentUpon>YachtsSpecificationFront.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\YachtsSpecificationFront.aspx.designer.cs">
+      <DependentUpon>YachtsSpecificationFront.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\YachtsVideoFront.aspx.cs">
+      <DependentUpon>YachtsVideoFront.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\YachtsVideoFront.aspx.designer.cs">
+      <DependentUpon>YachtsVideoFront.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2334,6 +2414,8 @@
     <Folder Include="Image\imageCompany\" />
     <Folder Include="Image\imageDealers\" />
     <Folder Include="Image\imageNews\" />
+    <Folder Include="Image\imageYachts\" />
+    <Folder Include="Upload\files\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

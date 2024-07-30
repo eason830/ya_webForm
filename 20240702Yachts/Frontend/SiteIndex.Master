@@ -4,16 +4,76 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
+
+<%-- 引入前端的 js 跟 css ------------------------------------------------------------------------%>
+<script type="text/javascript" src="./html/Scripts/jquery.min.js"></script>
+<script type="text/javascript" src="./html/Scripts/jquery.cycle.all.2.74.js"></script>
+
+
+
+
+<!--[if lt IE 7]>
+<script type="text/javascript" src="./html/javascript/iepngfix_tilebg.js"></script>
+<![endif]-->
+<link href="./html/css/style.css" rel="stylesheet" type="text/css" />
+<link href="./html/css/reset.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../Css/pagination.css" />
+
+
+
+
 <body>
     <form id="form1" runat="server">
-        <div>
+
+        <div class="contain">
+            <div class="sub">
+                <p><a href="./IndexFront.aspx">Home</a></p>
+            </div>
+
+            <!--------------------------------選單開始---------------------------------------------------->
+            <div class="menu">
+                <ul>
+                    <li class="menuli01"><a href="./YachtsFront.aspx">Yachts</a></li>
+                    <li class="menuli02"><a href="./NewsFront.aspx">NEWS</a></li>
+                    <li class="menuli03"><a href="./CompanyFront1.aspx">COMPANY</a></li>
+                    <li class="menuli04"><a href="./DealersFront.aspx">DEALERS</a></li>
+                    <li class="menuli05"><a href="./ContactFront.aspx">CONTACT</a></li>
+                </ul>
+            </div>
+            <!--------------------------------選單開始結束---------------------------------------------------->
+
+
+
+
+
+
+            <%-- 頁面內容 --%>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
+
+
+
+
+            <!--------------------------------落款開始---------------------------------------------------->
+            <div class="footer">
+                <p class="footerp01">© 1973-2011 Tayana Yachts, Inc. All Rights Reserved</p>
+                <div class="footer01">
+                    <span>No. 60, Hai Chien Road, Chung Men Li, Lin Yuan District, Kaohsiung City, Taiwan, R.O.C.</span><br />
+                    <span>TEL：+886(7)641-2721</span> <span>FAX：+886(7)642-3193</span><span><a href="mailto:tayangco@ms15.hinet.net">E-mail：tayangco@ms15.hinet.net</a>.</span>
+                </div>
+            </div>
+            <!--------------------------------落款結束---------------------------------------------------->
+
+        </div>
+
+
+
+        <div>
         </div>
     </form>
 </body>

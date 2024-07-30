@@ -7,9 +7,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    
-            <style>
 
+    <style>
         div#pagination {
             height: 50px;
             margin-top: 3px;
@@ -80,7 +79,19 @@
         }
     </style>
 
+    <!--遮罩-->
+    <div class="bannermasks">
+        <img src="./html/images/newbanner.jpg" alt="&quot;&quot;" width="967" height="371" />
+    </div>
+    <!--遮罩結束-->
 
+    <div class="banner">
+        <ul>
+            <li>
+                <img src="./html/images/newbanner.jpg" alt="Tayana Yachts" /></li>
+        </ul>
+
+    </div>
 
     <div class="conbg">
         <!--------------------------------左邊選單開始---------------------------------------------------->
@@ -211,8 +222,6 @@
 
                     <%--<div class="pagenumber">| <span>1</span> | <a href="#">2</a> | <a href="#">3</a> | <a href="#">4</a> | <a href="#">5</a> |  <a href="#">Next</a>  <a href="#">LastPage</a></div>
                     <div class="pagenumber1">Items：<span>89</span>  |  Pages：<span>1/9</span></div>--%>
-
-
                 </div>
 
 
